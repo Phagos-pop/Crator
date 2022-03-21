@@ -88,12 +88,10 @@ public class PlayerMove : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            Debug.Log(hit.collider.gameObject);
             if (hit.collider.gameObject.GetComponent<Building>())
             {
                 Building building = hit.collider.gameObject.GetComponent<Building>();
                 building.Action();
-                Debug.Log("action");
             }
         }
     }
